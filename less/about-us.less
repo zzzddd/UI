@@ -1,0 +1,46 @@
+.about {
+    .role {
+        width: 80%;
+       display: flex;
+        flex-wrap: wrap;
+          
+        @media @phone {
+            flex-direction: column;
+            align-items: center;
+         
+        }
+        
+        .dev {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            padding: 0 1rem;
+
+            @media @phone{
+                flex-direction: column;
+            align-items: center;
+                width: 90%;
+                img {
+                   width: 60%;
+                   display: block;
+                   margin: 0 auto;
+                }
+            }
+
+            img {
+                border-radius: 10%;
+            }
+            
+            .git-username {
+                padding: 0 1rem;
+                font-size: 1.5rem;
+                font-family: sans-serif;
+            }
+
+            a {
+                margin: 2rem;
+            }
+        }
+    }
+}

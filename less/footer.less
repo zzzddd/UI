@@ -1,0 +1,72 @@
+// Footer Styles
+footer {
+  display: flex;
+  flex-direction: column;
+  color:  @waterloo;
+  background: @wild-sand;
+  padding: 20px 0;
+  border: 1px double #e0e0e0;
+  border-radius: 10px;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  //background-image: url(https://images.unsplash.com/photo-1527707240828-f7ca7d3c46a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+  background-size: 100% 100%;
+ 
+  nav {
+    padding: 20px;
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;  
+    .center();
+    justify-content: space-around;
+    @media @phone {
+       width: 100%;
+      }
+    a {
+      text-decoration: none;
+      color: @border-real;
+      font: 1.5rem sans-serif;
+    }
+    p{
+     
+    }
+}
+}
+@media @phone {
+  .download {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .ios-download {
+      width: 60%;
+      margin: 0.75rem;
+    }
+
+    .android-download {
+      width: 60%;
+      padding-right: 0.5rem;
+    }
+  }}
+.logo-links {
+  flex-direction: column;
+  align-items: center;
+
+  .footer-logo {
+    width: 100%;
+
+    .horz-logo {
+      display: none;
+    }
+
+    .stacked-logo {
+      display: block;
+      width: 50%;
+    }
+  }
+
+  .links {
+    width: 100%;
+  }
+}
