@@ -212,7 +212,6 @@ p {
 footer {
   display: flex;
   flex-direction: column;
-  color: #81848E;
   background: #F6F6F6;
   padding: 20px 0;
   border: 1px double #e0e0e0;
@@ -239,7 +238,6 @@ footer nav {
 }
 footer nav a {
   text-decoration: none;
-  color: #dee2e6;
   font: 1.5rem sans-serif;
 }
 @media (max-width: 550px) {
@@ -297,7 +295,7 @@ footer nav a {
 .home .intro {
   width: 100%;
   height: 400px;
-  background-image: url(https://images.unsplash.com/photo-1530375323520-248ebdaa967f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+  background-image: url(/img/where-you-park-it.jpg);
   background-size: 100% 100%;
 }
 @media (max-width: 550px) {
@@ -344,7 +342,7 @@ footer nav a {
 }
 .home .space-images {
   height: 400px;
-  background-image: url(https://images.unsplash.com/photo-1541960394435-cff41352d1e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+  background-image: url(/img/rv-dark.jpg);
   background-size: 100% 100%;
   display: flex;
   justify-content: space-evenly;
