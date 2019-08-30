@@ -240,6 +240,9 @@ footer nav a {
   text-decoration: none;
   font: 1.5rem sans-serif;
 }
+footer nav p {
+  font-size: 0.5rem;
+}
 @media (max-width: 550px) {
   .download {
     flex-direction: column;

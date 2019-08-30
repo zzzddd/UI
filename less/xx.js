@@ -81,20 +81,20 @@
       "url": "https://swapi.co/api/people/1/"
     }
     //console.log(ch.name);
-    let b=[];
-    b=ch.films;
-    console.log(b);
-    `Luke Skywalker, 172cm, 77kg. Featured in 5 films.`
+//     let b=[];
+//     b=ch.films;
+//     console.log(b);
+//     `Luke Skywalker, 172cm, 77kg. Featured in 5 films.`
     
-    let a=parseInt((ch.vehicles[0].cost_in_credits)+ 33);
-    console.log(a);
-    console.log( parseInt(ch.vehicles[0].cost_in_credits) + ch.vehicles[1].cost_in_credits);
-    // um the number of crew and passenger spots for all starships defined on the
-//  * input character.
-//consol.log(ch.length);
-for(i=0;i<b.length;i++){
+//     let a=parseInt((ch.vehicles[0].cost_in_credits)+ 33);
+//     console.log(a);
+//     console.log( parseInt(ch.vehicles[0].cost_in_credits) + ch.vehicles[1].cost_in_credits);
+//     // um the number of crew and passenger spots for all starships defined on the
+// //  * input character.
+// //consol.log(ch.length);
+// for(i=0;i<b.length;i++){
 
-}
+// }
 // function getCargoCapacityTotal(character) {
 //     // TODO: Add your code here.
 //     let cargoa=ch.starships;
@@ -158,15 +158,102 @@ for(i=0;i<b.length;i++){
 // let vv=ch.vehicles[1].cost_in_credits;
 // return parseInt(ch.vehicles[0].cost_in_credits) + ch.vehicles[1].cost_in_credits;
 // console.log(vech1 + vv) ;
-function getCargoCapacityTotal(ch) {
-    // TODO: Add your code here.
-    let cargoa = ch.starships;
-    let veccl = ch.vehicles;
-    let totalcapacity = 0;
-    for (let i = 0; i < cargoa.length; i++) {
-      totalcapacity =
-        totalcapacity + cargoa[i].cargo_capacity + veccl[i].cargo_capacity;
+// let cargoa=[];
+//     let veccl=[];
+// function getCargoCapacityTotal(ch) {
+//     // TODO: Add your code here.
+    
+//      cargoa = ch.starships;
+//      veccl = ch.vehicles;
+//     let totalcapacity = 0;
+//     for (let i = 0; i < cargoa.length; i++) {
+//       totalcapacity =
+//         totalcapacity + parseInt(cargoa[i].cargo_capacity ) + parseInt(veccl[i].cargo_capacity) ;
+//     }
+//     return totalcapacity;
+   
+//   }
+//   console.log(cargoa);
+// //   console.log(getCargoCapacityTotal(ch));
+// let cargoa=[];
+// cargoa = ch.starships;
+//    let veccl=[];
+// function getCargoCapacityTotal(ch) {
+//     // TODO: Add your code here.
+//     for (let i = 0; i < cargoa.length; i++){
+//      veccl.push(cargoa[i].max_atmosphering_speed);}
+//      return (veccl);  
+//      for (let i = 0; i < cargoa.length; i++){
+//         if(veccl[i]>veccl[i+1])}
+//         return (veccl); 
+     //veccl = ch.vehicles;
+    //let totalcapacity = 0;
+    //  {
+
+    //   if((parseInt(ch.cargoa[i].max_atmosphering_speed)>(parseInt(ch.cargoa[i+1].max_atmosphering_speed)){
+    //   veccl=ch.starships[i].name;
+    //      return   veccl;}
+    // return null;
+    // //  }
+    // return Math.max(parseInt(cargoa.max_atmosphering_speed));
+    // }
+
+  console.log(ch.starships[0].name);
+  console.log(ch.films.length);
+  console.log(ch.starships[0].name);
+  console.log(`${ch.name},${ch.height}cm,${
+    ch.mass
+  }kg.Featured in ${ch.films.length} films`);
+  let costs=0;
+  let costss;
+  for(let i=0;i<ch.vehicles.length;i++){
+    if(ch.vehicles[i].cost_in_credits===null){
+        costss=0;}else{
+      costs=costs+parseInt(ch.vehicles[i].cost_in_credits);
     }
-    return totalcapacity;
   }
-  console.log(getCargoCapacityTotal(ch));
+  
+  console.log(costs);
+
+  let cargoa = ch.starships;
+
+  let totalcapacity = 0;
+  for (let i = 0; i < cargoa.length; i++) {
+    totalcapacity = totalcapacity + cargoa[i].crew + cargoa[i].passengers;
+  }
+   console.log(totalcapacity);
+  
+   function getNthFilm(ch, filmNumber) {
+    // TODO: Add your code here.
+    let filmarry = ch.films;
+    if (filmNumber === 1) {
+      return filmarry[0];
+    } else if (filmNumber === 2) {
+      return filmarry[1];
+    } else if (filmNumber === 3) {
+      return filmarry[2];
+    } else return `There are only 3 Star Wars movies. XXX my favorite`;
+  }
+console.log(getNthFilm(ch,1));  
+
+function getVehiclesCostInCreditsSumTotal(ch) {
+    // TODO: Add your code here.
+    let costs=0;
+    let x=2;
+    for(let i=0;i<ch.vehicles.length;i++){
+      if(ch.vehicles[i].cost_in_credits===null){
+          x=costs;
+        }else if(ch.vehicles[i].cost_in_credits!==null)
+        {
+        costs=costs + parseInt(ch.vehicles[i].cost_in_credits);
+      }
+    }
+  
+    
+    
+    return costs;
+  }
+  
+console.log(getVehiclesCostInCreditsSumTotal(ch) );
+
+  cargoa.reduce()
